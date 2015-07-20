@@ -35,6 +35,7 @@ include:
       - {{ bind }}
     {% endfor %}
     {% endif %}
+    - restart_policy: always
     - require:
       - dockerng: {{ mysql_docker.image }}
 {% endfor %}

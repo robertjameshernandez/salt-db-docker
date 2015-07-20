@@ -35,6 +35,7 @@ include:
       - {{ bind }}
     {% endfor %}
     {% endif %}
+    - restart_policy: always
     - require:
       - dockerng: {{ postgres_docker.image }}
 {% endfor %}
