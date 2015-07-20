@@ -1,0 +1,26 @@
+docker.version: auto
+
+docker-registries:
+  https://index.docker.io/v1/:
+    email: sample@example.com
+    password: supersecurepass
+    username: sampleuser101
+
+mysql_docker:
+  instances:
+    mysql1:
+      root_password: defaultpassword1
+      state: running
+      host_port: 3306
+      binds:
+        "/srv/mysql:/var/lib/mysql:rw":
+        "/srv/mysql_config/custom.cnf:/etc/mysql/conf.d/custom.cnf:ro": salt://docker/mysql-docker/custom.cnf
+
+postgres_docker:
+  instances:
+    postgres1:
+      root_password: defaultpassword1
+      state: running
+      host_port: 5432
+      binds:
+        "/srv/postgres:/var/lib/postgresql/data:rw":

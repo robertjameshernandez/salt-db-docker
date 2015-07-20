@@ -1,0 +1,8 @@
+{% import_yaml "postgres-docker/defaults.yaml" as default_settings %}
+
+{% set postgres_docker = salt['pillar.get'](
+    'postgres_docker',
+    default=default_settings.postgres_docker,
+    merge=True
+  )
+%}

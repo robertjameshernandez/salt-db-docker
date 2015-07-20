@@ -1,0 +1,3 @@
+postgres_docker:
+  image: postgres:9.4
+  instances: {}

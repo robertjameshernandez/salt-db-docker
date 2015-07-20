@@ -1,0 +1,8 @@
+{% import_yaml "mysql-docker/defaults.yaml" as default_settings %}
+
+{% set mysql_docker = salt['pillar.get'](
+    'mysql_docker',
+    default=default_settings.mysql_docker,
+    merge=True
+  )
+%}
