@@ -1,4 +1,4 @@
-{% from "postgres-docker/map.jinja" import postgres_docker with context %}
+{% from "docker/postgres-docker/map.jinja" import postgres_docker with context %}
 
 include:
   - docker

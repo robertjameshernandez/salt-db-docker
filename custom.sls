@@ -5,7 +5,7 @@ custom_pkgs:
       - vim
       - git
 
-salt-call --local state.highstate:
+/root/.virtualenvs/salt/bin/salt-call --local state.highstate:
   cron.present:
     - identifier: SALTHIGHSTATE
     - user: root

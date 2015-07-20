@@ -1,4 +1,4 @@
-{% from "mysql-docker/map.jinja" import mysql_docker with context %}
+{% from "docker/mysql-docker/map.jinja" import mysql_docker with context %}
 
 include:
   - docker

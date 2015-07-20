@@ -1,0 +1,8 @@
+{% import_yaml "docker/defaults.yaml" as default_settings %}
+
+{% set docker_config = salt['pillar.get'](
+    'docker_config',
+    default=default_settings.docker_config,
+    merge=True
+  )
+%}

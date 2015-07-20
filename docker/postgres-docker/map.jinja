@@ -1,4 +1,4 @@
-{% import_yaml "postgres-docker/defaults.yaml" as default_settings %}
+{% import_yaml "docker/postgres-docker/defaults.yaml" as default_settings %}
 
 {% set postgres_docker = salt['pillar.get'](
     'postgres_docker',
